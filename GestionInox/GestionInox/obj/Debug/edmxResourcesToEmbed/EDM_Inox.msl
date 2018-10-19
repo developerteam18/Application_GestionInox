@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Prestige_InoxModelStoreContainer" CdmEntityContainer="Prestige_InoxEntities">
+    <EntitySetMapping Name="TableClients">
+      <EntityTypeMapping TypeName="Prestige_InoxModel.TableClient">
+        <MappingFragment StoreEntitySet="Client">
+          <ScalarProperty Name="idC" ColumnName="idC" />
+          <ScalarProperty Name="Nom" ColumnName="Nom" />
+          <ScalarProperty Name="Prénom" ColumnName="Prénom" />
+          <ScalarProperty Name="Tel" ColumnName="Tel" />
+          <ScalarProperty Name="Adresse" ColumnName="Adresse" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

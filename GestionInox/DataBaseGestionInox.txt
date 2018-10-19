@@ -1,0 +1,49 @@
+create database Prestige_Inox
+use Prestige_Inox
+
+create table Client( idC int primary key identity(1,1),
+					Nom varchar(50),
+					Prénom varchar(50),
+					Tel nvarchar(50),
+					Adresse varchar(50)
+					)
+
+INSERT INTO Client VALUES ('Adnane','Yassine','06123456789','Ancienne Medina Rue X num X')
+INSERT INTO Client VALUES ('AA','aa','06123456789','Ancienne Medina Rue X num X')
+INSERT INTO Client VALUES ('BB','bb','11111111111','Ancienne Medina Rue X num X')
+INSERT INTO Client VALUES ('CC','cc','22222222222','Ancienne Medina Rue X num X')
+INSERT INTO Client VALUES ('DD','dd','33333333333','Ancienne Medina Rue X num X')
+INSERT INTO Client VALUES ('EE','ee','44444444444','Ancienne Medina Rue X num X')
+INSERT INTO Client VALUES ('FF','ff','06123456789','Ancienne Medina Rue X num X')
+INSERT INTO Client VALUES ('GG','gg','11111111111','Ancienne Medina Rue X num X')
+INSERT INTO Client VALUES ('HH','hh','22222222222','Ancienne Medina Rue X num X')
+INSERT INTO Client VALUES ('II','ii','33333333333','Ancienne Medina Rue X num X')
+INSERT INTO Client VALUES ('JJ','jj','44444444444','Ancienne Medina Rue X num X')
+SELECT *FROM Client
+
+----------------------------------------------------------------------------------------------------------------------
+
+
+create table Produit(idP int primary key identity(1,1), 
+					 Nom varchar(50))
+----------------------------------------------------------------------------------------------------------------------
+create table Stock( idS int primary key identity(1,1), 
+					Nom int references Produit(idP),
+					Qte int, 
+					PrixU float,
+					TypeA varchar(50) 
+					)
+----------------------------------------------------------------------------------------------------------------------
+create table Vente(idV int primary key identity(1,1),
+				   idC int references Client( idC),
+				   idpv int references ProduitVente(idpv),
+				   typeA varchar(50)
+				   )				   
+----------------------------------------------------------------------------------------------------------------------
+create table ProduitVente( idpv int primary key identity(1,1),idV int references Vente(idV),qte int,prix float,prixT float)
+
+create table Bon(idB int primary key,NumB int identity(1,1),dateV date)
+create table Facture(idF int primary key,NumF int identity(1,1), dateV date)
+
+create table Charge( idCh int primary key identity(1,1), TypeC varchar(50), PrixC float ,daate date )
+
