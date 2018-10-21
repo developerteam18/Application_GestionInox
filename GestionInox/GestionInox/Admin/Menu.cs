@@ -23,5 +23,12 @@ namespace GestionInox
             F.Show();
             Hide();
         }
+
+        private void gestionStockToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Admin.Stocks.F_GestionStock GS = new Admin.Stocks.F_GestionStock();
+            GS.Show();
+            Hide();
+        }
     }
 }

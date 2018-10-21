@@ -14,10 +14,19 @@ namespace GestionInox
     
     public partial class TableClient
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public TableClient()
+        {
+            this.Ventes = new HashSet<Vente>();
+        }
+    
         public int idC { get; set; }
         public string Nom { get; set; }
         public string Prénom { get; set; }
         public string Tel { get; set; }
         public string Adresse { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Vente> Ventes { get; set; }
     }
 }

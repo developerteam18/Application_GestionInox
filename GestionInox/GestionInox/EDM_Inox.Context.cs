@@ -26,5 +26,12 @@ namespace GestionInox
         }
     
         public virtual DbSet<TableClient> TableClients { get; set; }
+        public virtual DbSet<Bon> Bons { get; set; }
+        public virtual DbSet<Charge> Charges { get; set; }
+        public virtual DbSet<Facture> Factures { get; set; }
+        public virtual DbSet<Produit> Produits { get; set; }
+        public virtual DbSet<ProduitVente> ProduitVentes { get; set; }
+        public virtual DbSet<Stock> Stocks { get; set; }
+        public virtual DbSet<Vente> Ventes { get; set; }
     }
 }

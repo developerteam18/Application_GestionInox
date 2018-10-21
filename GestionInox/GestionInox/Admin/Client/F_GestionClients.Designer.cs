@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(F_GestionClients));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionFactureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionVentesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,11 +46,6 @@
             this.T_ChercheClient = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.Rd_Tele = new System.Windows.Forms.RadioButton();
-            this.Rd_Name = new System.Windows.Forms.RadioButton();
-            this.T_ChercherTele = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.GridTest = new System.Windows.Forms.DataGridView();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,15 +56,20 @@
             this.Column3 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Column13 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.Rd_Tele = new System.Windows.Forms.RadioButton();
+            this.Rd_Name = new System.Windows.Forms.RadioButton();
+            this.T_ChercherTele = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.BtnActualiser = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.BtnActualiser = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridTest)).BeginInit();
+            this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.SuspendLayout();
@@ -87,7 +87,7 @@
             this.gestionFactureToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gestionFactureToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("gestionFactureToolStripMenuItem.Image")));
             this.gestionFactureToolStripMenuItem.Name = "gestionFactureToolStripMenuItem";
-            this.gestionFactureToolStripMenuItem.Size = new System.Drawing.Size(185, 34);
+            this.gestionFactureToolStripMenuItem.Size = new System.Drawing.Size(184, 34);
             this.gestionFactureToolStripMenuItem.Text = "Gestion Facture";
             // 
             // gestionVentesToolStripMenuItem
@@ -95,7 +95,7 @@
             this.gestionVentesToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gestionVentesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("gestionVentesToolStripMenuItem.Image")));
             this.gestionVentesToolStripMenuItem.Name = "gestionVentesToolStripMenuItem";
-            this.gestionVentesToolStripMenuItem.Size = new System.Drawing.Size(180, 34);
+            this.gestionVentesToolStripMenuItem.Size = new System.Drawing.Size(179, 34);
             this.gestionVentesToolStripMenuItem.Text = "Gestion Ventes";
             // 
             // gestionStockToolStripMenuItem
@@ -103,7 +103,7 @@
             this.gestionStockToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gestionStockToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("gestionStockToolStripMenuItem.Image")));
             this.gestionStockToolStripMenuItem.Name = "gestionStockToolStripMenuItem";
-            this.gestionStockToolStripMenuItem.Size = new System.Drawing.Size(167, 34);
+            this.gestionStockToolStripMenuItem.Size = new System.Drawing.Size(166, 34);
             this.gestionStockToolStripMenuItem.Text = "Gestion Stock";
             // 
             // ajouterClientToolStripMenuItem
@@ -210,62 +210,6 @@
             this.groupBox4.TabIndex = 8;
             this.groupBox4.TabStop = false;
             // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.Rd_Tele);
-            this.groupBox3.Controls.Add(this.Rd_Name);
-            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.ForeColor = System.Drawing.Color.White;
-            this.groupBox3.Location = new System.Drawing.Point(458, 135);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(451, 80);
-            this.groupBox3.TabIndex = 15;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Type de Recherche";
-            // 
-            // Rd_Tele
-            // 
-            this.Rd_Tele.AutoSize = true;
-            this.Rd_Tele.Location = new System.Drawing.Point(264, 34);
-            this.Rd_Tele.Name = "Rd_Tele";
-            this.Rd_Tele.Size = new System.Drawing.Size(121, 28);
-            this.Rd_Tele.TabIndex = 1;
-            this.Rd_Tele.TabStop = true;
-            this.Rd_Tele.Text = "Téléphone";
-            this.Rd_Tele.UseVisualStyleBackColor = true;
-            this.Rd_Tele.CheckedChanged += new System.EventHandler(this.Rd_Tele_CheckedChanged);
-            // 
-            // Rd_Name
-            // 
-            this.Rd_Name.AutoSize = true;
-            this.Rd_Name.Location = new System.Drawing.Point(71, 34);
-            this.Rd_Name.Name = "Rd_Name";
-            this.Rd_Name.Size = new System.Drawing.Size(69, 28);
-            this.Rd_Name.TabIndex = 0;
-            this.Rd_Name.TabStop = true;
-            this.Rd_Name.Text = "Nom";
-            this.Rd_Name.UseVisualStyleBackColor = true;
-            this.Rd_Name.CheckedChanged += new System.EventHandler(this.Rd_Name_CheckedChanged);
-            // 
-            // T_ChercherTele
-            // 
-            this.T_ChercherTele.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.T_ChercherTele.Location = new System.Drawing.Point(264, 63);
-            this.T_ChercherTele.Name = "T_ChercherTele";
-            this.T_ChercherTele.Size = new System.Drawing.Size(163, 26);
-            this.T_ChercherTele.TabIndex = 14;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(10, 59);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(248, 29);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "Numero tele de Client";
-            // 
             // GridTest
             // 
             this.GridTest.AllowUserToAddRows = false;
@@ -327,31 +271,87 @@
             // 
             // Column3
             // 
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.NullValue = "Detail Credit";
-            this.Column3.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.NullValue = "Detail Credit";
+            this.Column3.DefaultCellStyle = dataGridViewCellStyle1;
             this.Column3.HeaderText = "Detail Credit";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             // 
             // Column2
             // 
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.NullValue = "Afficher Detail";
-            this.Column2.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.NullValue = "Afficher Detail";
+            this.Column2.DefaultCellStyle = dataGridViewCellStyle2;
             this.Column2.HeaderText = "Detail Client / Facture";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             // 
             // Column13
             // 
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.NullValue = "Modifier Client";
-            this.Column13.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.NullValue = "Modifier Client";
+            this.Column13.DefaultCellStyle = dataGridViewCellStyle3;
             this.Column13.HeaderText = "Modifier Client";
             this.Column13.Name = "Column13";
             this.Column13.ReadOnly = true;
             this.Column13.Width = 130;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.Rd_Tele);
+            this.groupBox3.Controls.Add(this.Rd_Name);
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.ForeColor = System.Drawing.Color.White;
+            this.groupBox3.Location = new System.Drawing.Point(458, 135);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(451, 80);
+            this.groupBox3.TabIndex = 15;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Type de Recherche";
+            // 
+            // Rd_Tele
+            // 
+            this.Rd_Tele.AutoSize = true;
+            this.Rd_Tele.Location = new System.Drawing.Point(264, 34);
+            this.Rd_Tele.Name = "Rd_Tele";
+            this.Rd_Tele.Size = new System.Drawing.Size(121, 28);
+            this.Rd_Tele.TabIndex = 1;
+            this.Rd_Tele.TabStop = true;
+            this.Rd_Tele.Text = "Téléphone";
+            this.Rd_Tele.UseVisualStyleBackColor = true;
+            this.Rd_Tele.CheckedChanged += new System.EventHandler(this.Rd_Tele_CheckedChanged);
+            // 
+            // Rd_Name
+            // 
+            this.Rd_Name.AutoSize = true;
+            this.Rd_Name.Location = new System.Drawing.Point(71, 34);
+            this.Rd_Name.Name = "Rd_Name";
+            this.Rd_Name.Size = new System.Drawing.Size(69, 28);
+            this.Rd_Name.TabIndex = 0;
+            this.Rd_Name.TabStop = true;
+            this.Rd_Name.Text = "Nom";
+            this.Rd_Name.UseVisualStyleBackColor = true;
+            this.Rd_Name.CheckedChanged += new System.EventHandler(this.Rd_Name_CheckedChanged);
+            // 
+            // T_ChercherTele
+            // 
+            this.T_ChercherTele.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.T_ChercherTele.Location = new System.Drawing.Point(264, 63);
+            this.T_ChercherTele.Name = "T_ChercherTele";
+            this.T_ChercherTele.Size = new System.Drawing.Size(163, 26);
+            this.T_ChercherTele.TabIndex = 14;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2.Location = new System.Drawing.Point(10, 59);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(248, 29);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Numero tele de Client";
             // 
             // groupBox1
             // 
@@ -368,17 +368,6 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             // 
-            // BtnActualiser
-            // 
-            this.BtnActualiser.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnActualiser.Image = ((System.Drawing.Image)(resources.GetObject("BtnActualiser.Image")));
-            this.BtnActualiser.Location = new System.Drawing.Point(997, 153);
-            this.BtnActualiser.Name = "BtnActualiser";
-            this.BtnActualiser.Size = new System.Drawing.Size(52, 44);
-            this.BtnActualiser.TabIndex = 16;
-            this.BtnActualiser.UseVisualStyleBackColor = true;
-            this.BtnActualiser.Click += new System.EventHandler(this.BtnActualiser_Click);
-            // 
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.T_ChercheClient);
@@ -390,6 +379,17 @@
             this.groupBox5.Size = new System.Drawing.Size(451, 110);
             this.groupBox5.TabIndex = 16;
             this.groupBox5.TabStop = false;
+            // 
+            // BtnActualiser
+            // 
+            this.BtnActualiser.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnActualiser.Image = ((System.Drawing.Image)(resources.GetObject("BtnActualiser.Image")));
+            this.BtnActualiser.Location = new System.Drawing.Point(997, 153);
+            this.BtnActualiser.Name = "BtnActualiser";
+            this.BtnActualiser.Size = new System.Drawing.Size(52, 44);
+            this.BtnActualiser.TabIndex = 16;
+            this.BtnActualiser.UseVisualStyleBackColor = true;
+            this.BtnActualiser.Click += new System.EventHandler(this.BtnActualiser_Click);
             // 
             // F_GestionClients
             // 
@@ -408,9 +408,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.GridTest)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.GridTest)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();

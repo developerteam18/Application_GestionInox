@@ -6,6 +6,17 @@
     <edmx:Diagrams>
       <Diagram DiagramId="0e68ae0f817f4204ad82f1c42b662a26" Name="Diagram1">
         <EntityTypeShape EntityType="Prestige_InoxModel.TableClient" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Prestige_InoxModel.Bon" Width="1.5" PointX="0.75" PointY="3.875" />
+        <EntityTypeShape EntityType="Prestige_InoxModel.Charge" Width="1.5" PointX="2.75" PointY="4.875" />
+        <EntityTypeShape EntityType="Prestige_InoxModel.Facture" Width="1.5" PointX="0.75" PointY="7.875" />
+        <EntityTypeShape EntityType="Prestige_InoxModel.Produit" Width="1.5" PointX="5.75" PointY="1.375" />
+        <EntityTypeShape EntityType="Prestige_InoxModel.ProduitVente" Width="1.5" PointX="5.625" PointY="5" />
+        <EntityTypeShape EntityType="Prestige_InoxModel.Stock" Width="1.5" PointX="8" PointY="1" />
+        <EntityTypeShape EntityType="Prestige_InoxModel.Vente" Width="1.5" PointX="3.375" PointY="0.75" />
+        <AssociationConnector Association="Prestige_InoxModel.FK__Vente__idC__05D8E0BE" />
+        <AssociationConnector Association="Prestige_InoxModel.FK__Stock__Nom__797309D9" />
+        <AssociationConnector Association="Prestige_InoxModel.FK__ProduitVent__idV__08B54D69" />
+        <AssociationConnector Association="Prestige_InoxModel.FK__Vente__idpv__0F624AF8" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

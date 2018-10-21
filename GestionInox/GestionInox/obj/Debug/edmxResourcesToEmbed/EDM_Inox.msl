@@ -12,5 +12,73 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Bons">
+      <EntityTypeMapping TypeName="Prestige_InoxModel.Bon">
+        <MappingFragment StoreEntitySet="Bon">
+          <ScalarProperty Name="dateV" ColumnName="dateV" />
+          <ScalarProperty Name="NumB" ColumnName="NumB" />
+          <ScalarProperty Name="idB" ColumnName="idB" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Charges">
+      <EntityTypeMapping TypeName="Prestige_InoxModel.Charge">
+        <MappingFragment StoreEntitySet="Charge">
+          <ScalarProperty Name="daate" ColumnName="daate" />
+          <ScalarProperty Name="PrixC" ColumnName="PrixC" />
+          <ScalarProperty Name="TypeC" ColumnName="TypeC" />
+          <ScalarProperty Name="idCh" ColumnName="idCh" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Factures">
+      <EntityTypeMapping TypeName="Prestige_InoxModel.Facture">
+        <MappingFragment StoreEntitySet="Facture">
+          <ScalarProperty Name="dateV" ColumnName="dateV" />
+          <ScalarProperty Name="NumF" ColumnName="NumF" />
+          <ScalarProperty Name="idF" ColumnName="idF" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Produits">
+      <EntityTypeMapping TypeName="Prestige_InoxModel.Produit">
+        <MappingFragment StoreEntitySet="Produit">
+          <ScalarProperty Name="Nom" ColumnName="Nom" />
+          <ScalarProperty Name="idP" ColumnName="idP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProduitVentes">
+      <EntityTypeMapping TypeName="Prestige_InoxModel.ProduitVente">
+        <MappingFragment StoreEntitySet="ProduitVente">
+          <ScalarProperty Name="prixT" ColumnName="prixT" />
+          <ScalarProperty Name="prix" ColumnName="prix" />
+          <ScalarProperty Name="qte" ColumnName="qte" />
+          <ScalarProperty Name="idV" ColumnName="idV" />
+          <ScalarProperty Name="idpv" ColumnName="idpv" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Stocks">
+      <EntityTypeMapping TypeName="Prestige_InoxModel.Stock">
+        <MappingFragment StoreEntitySet="Stock">
+          <ScalarProperty Name="TypeA" ColumnName="TypeA" />
+          <ScalarProperty Name="PrixU" ColumnName="PrixU" />
+          <ScalarProperty Name="Qte" ColumnName="Qte" />
+          <ScalarProperty Name="Nom" ColumnName="Nom" />
+          <ScalarProperty Name="idS" ColumnName="idS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ventes">
+      <EntityTypeMapping TypeName="Prestige_InoxModel.Vente">
+        <MappingFragment StoreEntitySet="Vente">
+          <ScalarProperty Name="idpv" ColumnName="idpv" />
+          <ScalarProperty Name="typeA" ColumnName="typeA" />
+          <ScalarProperty Name="idC" ColumnName="idC" />
+          <ScalarProperty Name="idV" ColumnName="idV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

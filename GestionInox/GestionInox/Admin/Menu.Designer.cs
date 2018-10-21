@@ -77,15 +77,16 @@
             this.gestionStockToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gestionStockToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("gestionStockToolStripMenuItem.Image")));
             this.gestionStockToolStripMenuItem.Name = "gestionStockToolStripMenuItem";
-            this.gestionStockToolStripMenuItem.Size = new System.Drawing.Size(167, 34);
+            this.gestionStockToolStripMenuItem.Size = new System.Drawing.Size(166, 34);
             this.gestionStockToolStripMenuItem.Text = "Gestion Stock";
+            this.gestionStockToolStripMenuItem.Click += new System.EventHandler(this.gestionStockToolStripMenuItem_Click);
             // 
             // gestionVentesToolStripMenuItem
             // 
             this.gestionVentesToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gestionVentesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("gestionVentesToolStripMenuItem.Image")));
             this.gestionVentesToolStripMenuItem.Name = "gestionVentesToolStripMenuItem";
-            this.gestionVentesToolStripMenuItem.Size = new System.Drawing.Size(180, 34);
+            this.gestionVentesToolStripMenuItem.Size = new System.Drawing.Size(179, 34);
             this.gestionVentesToolStripMenuItem.Text = "Gestion Ventes";
             // 
             // gestionFactureToolStripMenuItem
@@ -93,7 +94,7 @@
             this.gestionFactureToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gestionFactureToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("gestionFactureToolStripMenuItem.Image")));
             this.gestionFactureToolStripMenuItem.Name = "gestionFactureToolStripMenuItem";
-            this.gestionFactureToolStripMenuItem.Size = new System.Drawing.Size(185, 34);
+            this.gestionFactureToolStripMenuItem.Size = new System.Drawing.Size(184, 34);
             this.gestionFactureToolStripMenuItem.Text = "Gestion Facture";
             // 
             // gestionChargesToolStripMenuItem

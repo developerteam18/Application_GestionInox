@@ -96,7 +96,7 @@
             this.Btn_ConfirmerClient.Name = "Btn_ConfirmerClient";
             this.Btn_ConfirmerClient.Padding = new System.Windows.Forms.Padding(0, 3, 5, 0);
             this.Btn_ConfirmerClient.Size = new System.Drawing.Size(278, 46);
-            this.Btn_ConfirmerClient.TabIndex = 41;
+            this.Btn_ConfirmerClient.TabIndex = 21;
             this.Btn_ConfirmerClient.Text = "Valider  ";
             this.Btn_ConfirmerClient.UseVisualStyleBackColor = false;
             this.Btn_ConfirmerClient.Click += new System.EventHandler(this.Btn_Confirmer_Click);
@@ -112,7 +112,7 @@
             this.Btn_AnnulerClient.Name = "Btn_AnnulerClient";
             this.Btn_AnnulerClient.Padding = new System.Windows.Forms.Padding(0, 3, 5, 0);
             this.Btn_AnnulerClient.Size = new System.Drawing.Size(278, 46);
-            this.Btn_AnnulerClient.TabIndex = 42;
+            this.Btn_AnnulerClient.TabIndex = 22;
             this.Btn_AnnulerClient.Text = "Annuler  La Saisie    ";
             this.Btn_AnnulerClient.UseVisualStyleBackColor = false;
             this.Btn_AnnulerClient.Click += new System.EventHandler(this.button5_Click);
@@ -141,7 +141,7 @@
             this.T_AddAdressClient.Location = new System.Drawing.Point(186, 124);
             this.T_AddAdressClient.Name = "T_AddAdressClient";
             this.T_AddAdressClient.Size = new System.Drawing.Size(608, 26);
-            this.T_AddAdressClient.TabIndex = 20;
+            this.T_AddAdressClient.TabIndex = 18;
             // 
             // label5
             // 
@@ -151,7 +151,7 @@
             this.label5.Location = new System.Drawing.Point(10, 120);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(170, 29);
-            this.label5.TabIndex = 19;
+            this.label5.TabIndex = 17;
             this.label5.Text = "Adresse Client";
             // 
             // label3
@@ -162,7 +162,7 @@
             this.label3.Location = new System.Drawing.Point(404, 79);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(199, 29);
-            this.label3.TabIndex = 15;
+            this.label3.TabIndex = 19;
             this.label3.Text = "Téléphone Client";
             // 
             // T_AddPrenomClient
@@ -171,7 +171,7 @@
             this.T_AddPrenomClient.Location = new System.Drawing.Point(186, 82);
             this.T_AddPrenomClient.Name = "T_AddPrenomClient";
             this.T_AddPrenomClient.Size = new System.Drawing.Size(185, 26);
-            this.T_AddPrenomClient.TabIndex = 14;
+            this.T_AddPrenomClient.TabIndex = 16;
             // 
             // label1
             // 
@@ -192,7 +192,7 @@
             this.label2.Location = new System.Drawing.Point(10, 78);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(166, 29);
-            this.label2.TabIndex = 13;
+            this.label2.TabIndex = 15;
             this.label2.Text = "Prenom Client";
             // 
             // T_AddTeleClient
@@ -201,7 +201,7 @@
             this.T_AddTeleClient.Location = new System.Drawing.Point(609, 79);
             this.T_AddTeleClient.Name = "T_AddTeleClient";
             this.T_AddTeleClient.Size = new System.Drawing.Size(185, 26);
-            this.T_AddTeleClient.TabIndex = 16;
+            this.T_AddTeleClient.TabIndex = 20;
             // 
             // T_AddNumClient
             // 
@@ -218,7 +218,7 @@
             this.T_AddNomClient.Location = new System.Drawing.Point(186, 38);
             this.T_AddNomClient.Name = "T_AddNomClient";
             this.T_AddNomClient.Size = new System.Drawing.Size(185, 26);
-            this.T_AddNomClient.TabIndex = 18;
+            this.T_AddNomClient.TabIndex = 14;
             // 
             // label4
             // 
@@ -228,7 +228,7 @@
             this.label4.Location = new System.Drawing.Point(10, 34);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(133, 29);
-            this.label4.TabIndex = 17;
+            this.label4.TabIndex = 13;
             this.label4.Text = "Nom Client";
             // 
             // groupBox2
@@ -270,7 +270,7 @@
             this.ajouterClientToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ajouterClientToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("ajouterClientToolStripMenuItem.Image")));
             this.ajouterClientToolStripMenuItem.Name = "ajouterClientToolStripMenuItem";
-            this.ajouterClientToolStripMenuItem.Size = new System.Drawing.Size(189, 34);
+            this.ajouterClientToolStripMenuItem.Size = new System.Drawing.Size(187, 34);
             this.ajouterClientToolStripMenuItem.Text = "Tous Les Clients";
             this.ajouterClientToolStripMenuItem.Click += new System.EventHandler(this.ajouterClientToolStripMenuItem_Click);
             // 
@@ -279,7 +279,7 @@
             this.gestionStockToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gestionStockToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("gestionStockToolStripMenuItem.Image")));
             this.gestionStockToolStripMenuItem.Name = "gestionStockToolStripMenuItem";
-            this.gestionStockToolStripMenuItem.Size = new System.Drawing.Size(167, 34);
+            this.gestionStockToolStripMenuItem.Size = new System.Drawing.Size(166, 34);
             this.gestionStockToolStripMenuItem.Text = "Gestion Stock";
             // 
             // gestionVentesToolStripMenuItem
@@ -287,7 +287,7 @@
             this.gestionVentesToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gestionVentesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("gestionVentesToolStripMenuItem.Image")));
             this.gestionVentesToolStripMenuItem.Name = "gestionVentesToolStripMenuItem";
-            this.gestionVentesToolStripMenuItem.Size = new System.Drawing.Size(180, 34);
+            this.gestionVentesToolStripMenuItem.Size = new System.Drawing.Size(179, 34);
             this.gestionVentesToolStripMenuItem.Text = "Gestion Ventes";
             // 
             // gestionFactureToolStripMenuItem
@@ -295,7 +295,7 @@
             this.gestionFactureToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gestionFactureToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("gestionFactureToolStripMenuItem.Image")));
             this.gestionFactureToolStripMenuItem.Name = "gestionFactureToolStripMenuItem";
-            this.gestionFactureToolStripMenuItem.Size = new System.Drawing.Size(185, 34);
+            this.gestionFactureToolStripMenuItem.Size = new System.Drawing.Size(184, 34);
             this.gestionFactureToolStripMenuItem.Text = "Gestion Facture";
             // 
             // gestionChargesToolStripMenuItem
@@ -348,9 +348,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox T_AddNomClient;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox T_AddPrenomClient;
+        private System.Windows.Forms.TextBox T_AddAdressClient;
         private System.Windows.Forms.TextBox T_AddTeleClient;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox T_AddPrenomClient;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem ajouterClientToolStripMenuItem;
@@ -360,7 +361,6 @@
         private System.Windows.Forms.ToolStripMenuItem gestionChargesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quitterToolStripMenuItem;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox T_AddAdressClient;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button Btn_ConfirmerClient;
         private System.Windows.Forms.Button Btn_AnnulerClient;

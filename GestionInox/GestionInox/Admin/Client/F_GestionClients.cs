@@ -122,6 +122,9 @@ namespace GestionInox.Admin.Client
 
         private void GridTest_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            try
+            {
+
             int index = e.RowIndex;
 
             if (e.ColumnIndex == 6)
@@ -161,6 +164,11 @@ namespace GestionInox.Admin.Client
                         Hide();
                     }
                 }
+
+            }
+            }
+            catch
+            {
 
             }
             

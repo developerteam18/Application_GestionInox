@@ -9,8 +9,148 @@
     <Property Name="Prénom" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Tel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Adresse" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Ventes" Relationship="Prestige_InoxModel.FK__Vente__idC__05D8E0BE" FromRole="TableClient" ToRole="Vente" />
   </EntityType>
   <EntityContainer Name="Prestige_InoxEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="TableClients" EntityType="Prestige_InoxModel.TableClient" />
+    <EntitySet Name="Bons" EntityType="Prestige_InoxModel.Bon" />
+    <EntitySet Name="Charges" EntityType="Prestige_InoxModel.Charge" />
+    <EntitySet Name="Factures" EntityType="Prestige_InoxModel.Facture" />
+    <EntitySet Name="Produits" EntityType="Prestige_InoxModel.Produit" />
+    <EntitySet Name="ProduitVentes" EntityType="Prestige_InoxModel.ProduitVente" />
+    <EntitySet Name="Stocks" EntityType="Prestige_InoxModel.Stock" />
+    <EntitySet Name="Ventes" EntityType="Prestige_InoxModel.Vente" />
+    <AssociationSet Name="FK__Vente__idC__05D8E0BE" Association="Prestige_InoxModel.FK__Vente__idC__05D8E0BE">
+      <End Role="TableClient" EntitySet="TableClients" />
+      <End Role="Vente" EntitySet="Ventes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Stock__Nom__797309D9" Association="Prestige_InoxModel.FK__Stock__Nom__797309D9">
+      <End Role="Produit" EntitySet="Produits" />
+      <End Role="Stock" EntitySet="Stocks" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProduitVent__idV__08B54D69" Association="Prestige_InoxModel.FK__ProduitVent__idV__08B54D69">
+      <End Role="Vente" EntitySet="Ventes" />
+      <End Role="ProduitVente" EntitySet="ProduitVentes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Vente__idpv__0F624AF8" Association="Prestige_InoxModel.FK__Vente__idpv__0F624AF8">
+      <End Role="ProduitVente" EntitySet="ProduitVentes" />
+      <End Role="Vente" EntitySet="Ventes" />
+    </AssociationSet>
   </EntityContainer>
+  <EntityType Name="Bon">
+    <Key>
+      <PropertyRef Name="idB" />
+    </Key>
+    <Property Name="idB" Type="Int32" Nullable="false" />
+    <Property Name="NumB" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="dateV" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="Charge">
+    <Key>
+      <PropertyRef Name="idCh" />
+    </Key>
+    <Property Name="idCh" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TypeC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PrixC" Type="Double" />
+    <Property Name="daate" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="Facture">
+    <Key>
+      <PropertyRef Name="idF" />
+    </Key>
+    <Property Name="idF" Type="Int32" Nullable="false" />
+    <Property Name="NumF" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="dateV" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="Produit">
+    <Key>
+      <PropertyRef Name="idP" />
+    </Key>
+    <Property Name="idP" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nom" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Stocks" Relationship="Prestige_InoxModel.FK__Stock__Nom__797309D9" FromRole="Produit" ToRole="Stock" />
+  </EntityType>
+  <EntityType Name="ProduitVente">
+    <Key>
+      <PropertyRef Name="idpv" />
+    </Key>
+    <Property Name="idpv" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idV" Type="Int32" />
+    <Property Name="qte" Type="Int32" />
+    <Property Name="prix" Type="Double" />
+    <Property Name="prixT" Type="Double" />
+    <NavigationProperty Name="Vente" Relationship="Prestige_InoxModel.FK__ProduitVent__idV__08B54D69" FromRole="ProduitVente" ToRole="Vente" />
+    <NavigationProperty Name="Ventes" Relationship="Prestige_InoxModel.FK__Vente__idpv__0F624AF8" FromRole="ProduitVente" ToRole="Vente" />
+  </EntityType>
+  <EntityType Name="Stock">
+    <Key>
+      <PropertyRef Name="idS" />
+    </Key>
+    <Property Name="idS" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nom" Type="Int32" />
+    <Property Name="Qte" Type="Int32" />
+    <Property Name="PrixU" Type="Double" />
+    <Property Name="TypeA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Produit" Relationship="Prestige_InoxModel.FK__Stock__Nom__797309D9" FromRole="Stock" ToRole="Produit" />
+  </EntityType>
+  <EntityType Name="Vente">
+    <Key>
+      <PropertyRef Name="idV" />
+    </Key>
+    <Property Name="idV" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idC" Type="Int32" />
+    <Property Name="typeA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="idpv" Type="Int32" />
+    <NavigationProperty Name="Client" Relationship="Prestige_InoxModel.FK__Vente__idC__05D8E0BE" FromRole="Vente" ToRole="TableClient" />
+    <NavigationProperty Name="ProduitVentes" Relationship="Prestige_InoxModel.FK__ProduitVent__idV__08B54D69" FromRole="Vente" ToRole="ProduitVente" />
+    <NavigationProperty Name="ProduitVente" Relationship="Prestige_InoxModel.FK__Vente__idpv__0F624AF8" FromRole="Vente" ToRole="ProduitVente" />
+  </EntityType>
+  <Association Name="FK__Vente__idC__05D8E0BE">
+    <End Type="Prestige_InoxModel.TableClient" Role="TableClient" Multiplicity="0..1" />
+    <End Type="Prestige_InoxModel.Vente" Role="Vente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TableClient">
+        <PropertyRef Name="idC" />
+      </Principal>
+      <Dependent Role="Vente">
+        <PropertyRef Name="idC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Stock__Nom__797309D9">
+    <End Type="Prestige_InoxModel.Produit" Role="Produit" Multiplicity="0..1" />
+    <End Type="Prestige_InoxModel.Stock" Role="Stock" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Produit">
+        <PropertyRef Name="idP" />
+      </Principal>
+      <Dependent Role="Stock">
+        <PropertyRef Name="Nom" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProduitVent__idV__08B54D69">
+    <End Type="Prestige_InoxModel.Vente" Role="Vente" Multiplicity="0..1" />
+    <End Type="Prestige_InoxModel.ProduitVente" Role="ProduitVente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vente">
+        <PropertyRef Name="idV" />
+      </Principal>
+      <Dependent Role="ProduitVente">
+        <PropertyRef Name="idV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Vente__idpv__0F624AF8">
+    <End Type="Prestige_InoxModel.ProduitVente" Role="ProduitVente" Multiplicity="0..1" />
+    <End Type="Prestige_InoxModel.Vente" Role="Vente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProduitVente">
+        <PropertyRef Name="idpv" />
+      </Principal>
+      <Dependent Role="Vente">
+        <PropertyRef Name="idpv" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>
