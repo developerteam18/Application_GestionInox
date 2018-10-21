@@ -34,17 +34,21 @@ namespace GestionInox.Admin.Stocks
             var the_stock = p.Stocks.ToList();
             for (int i = 0; i < the_stock.ToList().Count; i++)
             {
-                dataGridView1.Rows.Add(the_stock.ToList()[i].Nom,
+                nom.DataSource = p.Produits.Select(s => new { Id_Produit = s.idP, Nom_Poduit = s.Nom }).ToList();
+                // var n = the_stock.ToList()[i].Nom;
+
+
+               
+                dataGridView1.Rows.Add(the_stock.ToList()[i].Produit.Nom,
                                         the_stock.ToList()[i].Qte,
                                         the_stock.ToList()[i].PrixU,
                                         the_stock.ToList()[i].TypeA);
             }
         }
 
+
         private void F_GestionStock_Load(object sender, EventArgs e)
         {
-            // TODO: cette ligne de code charge les données dans la table 'prestige_InoxDataSet1.Produit'. Vous pouvez la déplacer ou la supprimer selon les besoins.
-            this.produitTableAdapter.Fill(this.prestige_InoxDataSet1.Produit);
             //Remplissage Cobobox
             RemplirCombo();
             //Remplissage Datagrid
@@ -101,7 +105,7 @@ namespace GestionInox.Admin.Stocks
            
         }
 
-        public static int NomProduit = 0;
+        public static string NomProduit = "";
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -109,7 +113,7 @@ namespace GestionInox.Admin.Stocks
             try
             {
                 DataGridViewRow row = dataGridView1.Rows[i];
-                NomProduit = int.Parse(row.Cells[0].Value.ToString());
+                NomProduit = row.Cells[0].Value.ToString();
                 if (e.ColumnIndex == 4)
                 {       
                     F_ModifierStock ms = new F_ModifierStock();
@@ -121,7 +125,7 @@ namespace GestionInox.Admin.Stocks
                         if (e.ColumnIndex == 5)
                         {
                             Prestige_InoxEntities p = new Prestige_InoxEntities();
-                            Stock stocks = (from A in p.Stocks where A.Nom == NomProduit select A).First();
+                            Stock stocks = (from A in p.Stocks where A.Produit.Nom == NomProduit select A).First();
                             p.Stocks.Remove(stocks);
                             p.SaveChanges();
                             MessageBox.Show("Le produit a été supprimé ");
@@ -152,7 +156,7 @@ namespace GestionInox.Admin.Stocks
             {
                 for (int i = 0; i < InfosStock.ToList().Count; i++)
                 {
-                    dataGridView1.Rows.Add(InfosStock[i].Nom,
+                    dataGridView1.Rows.Add(InfosStock[i].Produit.Nom,
                                            InfosStock[i].Qte,
                                            InfosStock[i].PrixU,
                                            InfosStock[i].TypeA);

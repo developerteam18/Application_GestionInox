@@ -16,18 +16,18 @@ namespace GestionInox.Admin.Stocks
         {
             InitializeComponent();
         }
-        public int NomProd =0;
+        public string NomProd ="";
 
         public void getDataStock()
         {
             Prestige_InoxEntities P = new Prestige_InoxEntities();
             var StockModifiée = (from a in P.Stocks
-                                 where a.Nom == NomProd
+                                 where a.Produit.Nom == NomProd
                                  select a).First();
 
             if(StockModifiée != null)
             {
-                nom.Text =StockModifiée.Nom.ToString();
+                nom.Text =StockModifiée.Produit.Nom.ToString();
                 prix.Text = StockModifiée.PrixU.ToString();
                 nouveau_quantite.Text = StockModifiée.Qte.ToString();
                 type_achat.Text = StockModifiée.TypeA.ToString();
@@ -42,7 +42,7 @@ namespace GestionInox.Admin.Stocks
         private void F_ModifierStock_Load(object sender, EventArgs e)
         {
             nom.Text = F_GestionStock.NomProduit.ToString();
-            NomProd = int.Parse(F_GestionStock.NomProduit.ToString());
+            NomProd = F_GestionStock.NomProduit.ToString();
 
             getDataStock();
         }
@@ -61,7 +61,7 @@ namespace GestionInox.Admin.Stocks
             {
 
                 var st = (from n in P.Stocks
-                                 where n.Nom == NomProd
+                                 where n.Produit.Nom == NomProd
                                  select n).First();
 
                 if (st != null)

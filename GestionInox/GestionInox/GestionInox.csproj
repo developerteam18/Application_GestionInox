@@ -150,16 +150,6 @@
     <Compile Include="Admin\Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Prestige_InoxDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Prestige_InoxDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Prestige_InoxDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Prestige_InoxDataSet1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Produit.cs">
       <DependentUpon>EDM_Inox.tt</DependentUpon>
     </Compile>
@@ -227,28 +217,6 @@
       <DependentUpon>EDM_Inox.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
-    <None Include="Prestige_InoxDataSet.xsc">
-      <DependentUpon>Prestige_InoxDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="Prestige_InoxDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Prestige_InoxDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Prestige_InoxDataSet.xss">
-      <DependentUpon>Prestige_InoxDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="Prestige_InoxDataSet1.xsc">
-      <DependentUpon>Prestige_InoxDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="Prestige_InoxDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Prestige_InoxDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Prestige_InoxDataSet1.xss">
-      <DependentUpon>Prestige_InoxDataSet1.xsd</DependentUpon>
-    </None>
     <None Include="Properties\DataSources\GestionInox.Admin.Stocks.F_GestionStock.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

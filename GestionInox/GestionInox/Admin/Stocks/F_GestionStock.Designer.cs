@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(F_GestionStock));
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -42,12 +41,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.Btn_Chercher = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.BtnActualiser = new System.Windows.Forms.Button();
-            this.prestige_InoxDataSet1 = new GestionInox.Prestige_InoxDataSet1();
-            this.produitBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.produitTableAdapter = new GestionInox.Prestige_InoxDataSet1TableAdapters.ProduitTableAdapter();
-            this.name = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantité = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prix_achat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.type_achat = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,8 +51,6 @@
             this.suppression = new System.Windows.Forms.DataGridViewButtonColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.prestige_InoxDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.produitBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label4
@@ -186,6 +180,17 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = " ";
             // 
+            // BtnActualiser
+            // 
+            this.BtnActualiser.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnActualiser.Image = ((System.Drawing.Image)(resources.GetObject("BtnActualiser.Image")));
+            this.BtnActualiser.Location = new System.Drawing.Point(576, 65);
+            this.BtnActualiser.Name = "BtnActualiser";
+            this.BtnActualiser.Size = new System.Drawing.Size(52, 44);
+            this.BtnActualiser.TabIndex = 38;
+            this.BtnActualiser.UseVisualStyleBackColor = true;
+            this.BtnActualiser.Click += new System.EventHandler(this.BtnActualiser_Click);
+            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
@@ -205,41 +210,12 @@
             this.dataGridView1.TabIndex = 38;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
-            // BtnActualiser
-            // 
-            this.BtnActualiser.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnActualiser.Image = ((System.Drawing.Image)(resources.GetObject("BtnActualiser.Image")));
-            this.BtnActualiser.Location = new System.Drawing.Point(576, 65);
-            this.BtnActualiser.Name = "BtnActualiser";
-            this.BtnActualiser.Size = new System.Drawing.Size(52, 44);
-            this.BtnActualiser.TabIndex = 38;
-            this.BtnActualiser.UseVisualStyleBackColor = true;
-            this.BtnActualiser.Click += new System.EventHandler(this.BtnActualiser_Click);
-            // 
-            // prestige_InoxDataSet1
-            // 
-            this.prestige_InoxDataSet1.DataSetName = "Prestige_InoxDataSet1";
-            this.prestige_InoxDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // produitBindingSource
-            // 
-            this.produitBindingSource.DataMember = "Produit";
-            this.produitBindingSource.DataSource = this.prestige_InoxDataSet1;
-            // 
-            // produitTableAdapter
-            // 
-            this.produitTableAdapter.ClearBeforeFill = true;
-            // 
             // name
             // 
-            this.name.DataSource = this.produitBindingSource;
-            this.name.DisplayMember = "Nom";
             this.name.HeaderText = "Nom";
             this.name.Name = "name";
             this.name.ReadOnly = true;
             this.name.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.name.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.name.ValueMember = "idP";
             // 
             // quantité
             // 
@@ -292,8 +268,6 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.prestige_InoxDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.produitBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -313,10 +287,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button BtnActualiser;
-        private Prestige_InoxDataSet1 prestige_InoxDataSet1;
-        private System.Windows.Forms.BindingSource produitBindingSource;
-        private Prestige_InoxDataSet1TableAdapters.ProduitTableAdapter produitTableAdapter;
-        private System.Windows.Forms.DataGridViewComboBoxColumn name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn name;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantité;
         private System.Windows.Forms.DataGridViewTextBoxColumn prix_achat;
         private System.Windows.Forms.DataGridViewTextBoxColumn type_achat;
